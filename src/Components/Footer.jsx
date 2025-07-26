@@ -14,7 +14,7 @@ function Footer() {
                     <h3 className="text-2xl font-bold mb-4" style={{ color: "#FFE3D7" }}>
                       Ashe Beauty
                     </h3>
-                    <p className="text-gray-400 mb-4 w-[400px]">
+                    <p className="text-gray-400 mb-4 w-[350px]">
                       Transforming beauty with traditional African techniques and modern styling approaches.
                     </p>
                     <div className="flex space-x-4">
