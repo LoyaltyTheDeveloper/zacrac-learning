@@ -7,15 +7,15 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(() => localStorage.getItem('token'));
   const [isAuthenticated, setIsAuthenticated] = useState(!!token);
-   const [user, setUser] = useState(() => localStorage.getItem('userEmail') || '');
+  //  const [user, setUser] = useState(() => localStorage.getItem('userEmail') || '');
 
 
-  const signin = (newToken, userEmail) => {
+  const signin = (newToken) => {
     localStorage.setItem('token', newToken);
-    localStorage.setItem('userEmail', userEmail);
+    // localStorage.setItem('userEmail', userEmail);
     setToken(newToken);
     setIsAuthenticated(true);
-    setUser(userEmail);
+    // setUser(userEmail);
   };
 
   // const logout = () => {
@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
   // };
 
   return (
-    <AuthContext.Provider value={{ token, setToken, isAuthenticated, setIsAuthenticated, signin, user, setUser }}>
+    <AuthContext.Provider value={{ token, setToken, isAuthenticated, setIsAuthenticated, signin }}>
       {children}
     </AuthContext.Provider>
   );
